@@ -33,3 +33,21 @@ public:
         name = n;
     }
 };
+// Main Library Management System
+class Library {
+private:
+    vector<Book> books;
+    vector<Member> members;
+    map<int, time_t> borrowRecords; // Tracks borrowed books with timestamps
+    map<int, string> reviews;
+
+public:
+    void registerBook(int id, string title, string author, string publisher, string category) {
+        books.push_back(Book(id, title, author, publisher, category));
+        cout << "Book Registered Successfully!" << endl;
+    }
+
+    void registerMember(int id, string name) {
+        members.push_back(Member(id, name));
+        cout << "Member Registered Successfully!" << endl;
+    }
