@@ -21,3 +21,15 @@ public:
         isAvailable = true;
     }
 };
+// Structure to store member details
+class Member {
+public:
+    int memberID;
+    string name;
+    vector<int> borrowedBooks;
+
+    Member(int id, string n) {
+        memberID = id;
+        name = n;
+    }
+};
